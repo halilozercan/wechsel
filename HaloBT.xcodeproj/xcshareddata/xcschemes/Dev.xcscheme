@@ -17,7 +17,7 @@
                BlueprintIdentifier = "FDF418FD219DD5D500A8E8E1"
                BuildableName = "wechsel.app"
                BlueprintName = "wechsel"
-               ReferencedContainer = "container:wechsel.xcodeproj">
+               ReferencedContainer = "container:HaloBT.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -27,19 +27,17 @@
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
-      <Testables>
-      </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "FDF418FD219DD5D500A8E8E1"
             BuildableName = "wechsel.app"
             BlueprintName = "wechsel"
-            ReferencedContainer = "container:wechsel.xcodeproj">
+            ReferencedContainer = "container:HaloBT.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
-      <AdditionalOptions>
-      </AdditionalOptions>
+      <Testables>
+      </Testables>
    </TestAction>
    <LaunchAction
       buildConfiguration = "Debug"
@@ -58,11 +56,9 @@
             BlueprintIdentifier = "FDF418FD219DD5D500A8E8E1"
             BuildableName = "wechsel.app"
             BlueprintName = "wechsel"
-            ReferencedContainer = "container:wechsel.xcodeproj">
+            ReferencedContainer = "container:HaloBT.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
-      <AdditionalOptions>
-      </AdditionalOptions>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
@@ -77,7 +73,7 @@
             BlueprintIdentifier = "FDF418FD219DD5D500A8E8E1"
             BuildableName = "wechsel.app"
             BlueprintName = "wechsel"
-            ReferencedContainer = "container:wechsel.xcodeproj">
+            ReferencedContainer = "container:HaloBT.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

@@ -7,13 +7,16 @@
 //
 
 import Cocoa
+import MASShortcut
 
 class DeviceTableCellView: NSTableCellView {
     @IBOutlet weak var progressIndicator: NSProgressIndicator!
     @IBOutlet weak var imgView: NSImageView!
     @IBOutlet weak var nameTextField: NSTextField!
     @IBOutlet weak var lastUsedTextField: NSTextField!
-
+    
+    @IBOutlet weak var shortcutView: MASShortcutView!
+    
     override func draw(_ dirtyRect: NSRect) {
         super.draw(dirtyRect)
     }

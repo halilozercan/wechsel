@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="15705" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14490.70"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="15705"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -18,16 +18,16 @@
             <windowStyleMask key="styleMask" titled="YES" closable="YES" nonactivatingPanel="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="196" y="240" width="480" height="270"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1050"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1177"/>
             <view key="contentView" wantsLayer="YES" id="se5-gp-TjO">
                 <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                 <subviews>
                     <stackView distribution="equalSpacing" orientation="vertical" alignment="leading" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CaX-wy-cAC">
-                        <rect key="frame" x="30" y="112" width="420" height="46"/>
+                        <rect key="frame" x="30" y="113" width="420" height="44"/>
                         <subviews>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Lja-wI-mRx">
-                                <rect key="frame" x="-2" y="25" width="194" height="21"/>
+                                <rect key="frame" x="-2" y="24" width="194" height="20"/>
                                 <textFieldCell key="cell" title="No paired device found!" id="Wnu-CW-ZjC">
                                     <font key="font" metaFont="systemSemibold" size="17"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -35,7 +35,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="eVr-u7-rzh">
-                                <rect key="frame" x="-2" y="0.0" width="362" height="17"/>
+                                <rect key="frame" x="-2" y="0.0" width="362" height="16"/>
                                 <textFieldCell key="cell" title="Use the System Preferences to pair a new bluetooth device" id="hHg-Lk-oza">
                                     <font key="font" usesAppearanceFont="YES"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -130,7 +130,7 @@
                                                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                             </textFieldCell>
                                                         </textField>
-                                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dG3-Pm-ZGN">
+                                                        <textField hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dG3-Pm-ZGN">
                                                             <rect key="frame" x="356" y="9" width="107" height="14"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <textFieldCell key="cell" lineBreakMode="clipping" alignment="right" title="Label" id="HMf-Ap-STb">
@@ -143,12 +143,17 @@
                                                             <rect key="frame" x="8" y="12" width="16" height="16"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                         </progressIndicator>
+                                                        <customView id="ATq-NN-qZn" customClass="MASShortcutView">
+                                                            <rect key="frame" x="376" y="9" width="101" height="22"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                        </customView>
                                                     </subviews>
                                                     <connections>
                                                         <outlet property="imgView" destination="pqK-0P-Ig7" id="bLZ-ae-c8K"/>
                                                         <outlet property="lastUsedTextField" destination="dG3-Pm-ZGN" id="3gM-ee-cdL"/>
                                                         <outlet property="nameTextField" destination="TgL-c4-Ucg" id="kwd-s5-ty3"/>
                                                         <outlet property="progressIndicator" destination="dem-qj-v8a" id="AGE-q6-bNo"/>
+                                                        <outlet property="shortcutView" destination="ATq-NN-qZn" id="Ela-6C-v4H"/>
                                                     </connections>
                                                 </tableCellView>
                                             </prototypeCellViews>
@@ -180,6 +185,7 @@
             <connections>
                 <outlet property="delegate" destination="-2" id="0bl-1N-AYu"/>
             </connections>
+            <point key="canvasLocation" x="139" y="147"/>
         </window>
         <viewController id="Hck-wl-W32" customClass="ViewController" customModule="wechsel" customModuleProvider="target">
             <connections>

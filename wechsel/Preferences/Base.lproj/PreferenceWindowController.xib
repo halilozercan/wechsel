@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="15705" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14490.70"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="15705"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -17,13 +17,13 @@
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="196" y="240" width="314" height="179"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1050"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1177"/>
             <view key="contentView" wantsLayer="YES" id="se5-gp-TjO">
                 <rect key="frame" x="0.0" y="0.0" width="314" height="179"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="sXP-ov-PqN">
-                        <rect key="frame" x="18" y="137" width="269" height="22"/>
+                        <rect key="frame" x="18" y="138" width="269" height="21"/>
                         <textFieldCell key="cell" lineBreakMode="clipping" title="Settings" id="2R8-Kc-aKg">
                             <font key="font" size="18" name=".AppleSystemUIFontBold"/>
                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -31,7 +31,7 @@
                         </textFieldCell>
                     </textField>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ZiZ-ga-7Mq">
-                        <rect key="frame" x="18" y="94" width="89" height="17"/>
+                        <rect key="frame" x="18" y="96" width="89" height="16"/>
                         <textFieldCell key="cell" lineBreakMode="clipping" title="Global Hotkey" id="ofx-Yw-abH">
                             <font key="font" metaFont="titleBar"/>
                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -49,7 +49,7 @@
                         </connections>
                     </button>
                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="eLv-DA-LhJ">
-                        <rect key="frame" x="18" y="58" width="107" height="18"/>
+                        <rect key="frame" x="18" y="60" width="107" height="18"/>
                         <buttonCell key="cell" type="check" title="Open at Login" bezelStyle="regularSquare" imagePosition="left" inset="2" id="T7c-tt-Fxi">
                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                             <font key="font" metaFont="system"/>
@@ -59,7 +59,7 @@
                         </connections>
                     </button>
                     <customView translatesAutoresizingMaskIntoConstraints="NO" id="CrM-dW-Ggr" customClass="MASShortcutView">
-                        <rect key="frame" x="119" y="91" width="166" height="23"/>
+                        <rect key="frame" x="119" y="93" width="166" height="22"/>
                     </customView>
                 </subviews>
                 <constraints>

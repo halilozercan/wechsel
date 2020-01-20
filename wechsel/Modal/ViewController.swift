@@ -7,6 +7,7 @@
 //
 
 import Cocoa
+import UserNotifications
 
 enum ModalState {
     case ConnectionMode
@@ -20,6 +21,8 @@ class ViewController: NSViewController {
     @IBOutlet var errorView: NSStackView!
     @IBOutlet var tableView: NSTableView!
     @IBOutlet var scrollView: NSScrollView!
+    
+    let preferenceWindowController = PreferenceWindowController.shared
     
     var bluetooth: Bluetooth = Bluetooth.shared
     var state: ModalState = ModalState.ConnectionMode
@@ -157,6 +160,11 @@ extension ViewController: NSTableViewDelegate {
         deviceView.nameTextField.stringValue = name
         deviceView.lastUsedTextField.stringValue = timeAgoSince(recentAccess)
         deviceView.setConnectionState(connnected: bluetoothDevices[row].isConnected())
+        deviceView.shortcutView.associatedUserDefaultsKey = Config.key + name
+        
+        MASShortcutBinder.shared()?.bindShortcut(withDefaultsKey: Config.key + name, toAction: { () -> Void in
+            self.connectToDevice(device: bluetoothDevices[row])
+        })
 
         if self.state == ModalState.BluetoothMode {
             deviceView.disabled()
@@ -165,4 +173,39 @@ extension ViewController: NSTableViewDelegate {
         return deviceView
     }
     
+    func connectToDevice(device: IOBluetoothDevice) {
+        
+        let finishedHandler = {(success: Bool) -> Void in
+        }
+        
+        showNotification(device: device)
+        
+        let desiredState = !device.isConnected()
+        self.bluetooth.modifyConnection(device: device, desiredState: desiredState, finished: finishedHandler)
+    }
+    
+    func showNotification(device: IOBluetoothDevice) {
+        let content = UNMutableNotificationContent()
+        var state = "Connecting"
+        if(device.isConnected()) {
+            state = "Disconnecting"
+        }
+        
+        content.title = NSString.localizedUserNotificationString(forKey: "Bluetooth Connection", arguments: nil)
+        content.body = NSString.localizedUserNotificationString(forKey: "\(state) \(device.nameOrAddress ?? "a bluetooth device")",
+                                                                arguments: nil)
+        
+        let trigger = UNTimeIntervalNotificationTrigger.init(timeInterval: 0.3, repeats: false)
+         
+        // Create the request object.
+        let request = UNNotificationRequest(identifier: "MorningAlarm", content: content, trigger: trigger)
+        
+        // Schedule the request.
+        let center = UNUserNotificationCenter.current()
+        center.add(request) { (error : Error?) in
+            if let theError = error {
+                print(theError.localizedDescription)
+            }
+        }
+    }
 }

@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:wechsel.xcodeproj">
+      location = "self:/Users/hozercan/Works/wechsel/HaloBT.xcodeproj">
    </FileRef>
 </Workspace>

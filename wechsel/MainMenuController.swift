@@ -7,6 +7,7 @@
 //
 
 import Cocoa
+import UserNotifications
 
 class MainMenuController: NSObject {
     @IBOutlet weak var mainMenu: NSMenu!
@@ -31,6 +32,11 @@ class MainMenuController: NSObject {
         
         // add Observer for UserDefault changes of the ModalKeyCode
         UserDefaults.standard.addObserver(self, forKeyPath: modalHotKeyDefaultsKey, options: NSKeyValueObservingOptions.new, context: nil)
+        
+        let center = UNUserNotificationCenter.current()
+        center.requestAuthorization(options: [.alert, .sound]) { granted, error in
+            // Enable or disable features based on authorization.
+        }
 
     }
     override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
@@ -44,7 +50,7 @@ class MainMenuController: NSObject {
             if let serializedShortcut = UserDefaults.standard.data(forKey: modalHotKeyDefaultsKey) {
                 let shortcut = NSKeyedUnarchiver.unarchiveObject(with: serializedShortcut) as! MASShortcut
                 showModalMenuItem.keyEquivalent = shortcut.keyCodeStringForKeyEquivalent
-                showModalMenuItem.keyEquivalentModifierMask = NSEvent.ModifierFlags(rawValue: shortcut.modifierFlags)
+                showModalMenuItem.keyEquivalentModifierMask = NSEvent.ModifierFlags(rawValue: shortcut.modifierFlags.rawValue)
             }
         }
     }

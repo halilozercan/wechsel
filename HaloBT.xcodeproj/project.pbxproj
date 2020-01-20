@@ -281,7 +281,7 @@
 					};
 				};
 			};
-			buildConfigurationList = FDF418F9219DD5D500A8E8E1 /* Build configuration list for PBXProject "wechsel" */;
+			buildConfigurationList = FDF418F9219DD5D500A8E8E1 /* Build configuration list for PBXProject "HaloBT" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -552,7 +552,7 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = M7WS23A7ZJ;
+				DEVELOPMENT_TEAM = AZRD5XKSMM;
 				ENABLE_HARDENED_RUNTIME = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -564,7 +564,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				PRODUCT_BUNDLE_IDENTIFIER = io.weise.wechsel;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -581,7 +581,7 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = M7WS23A7ZJ;
+				DEVELOPMENT_TEAM = AZRD5XKSMM;
 				ENABLE_HARDENED_RUNTIME = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -593,7 +593,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				PRODUCT_BUNDLE_IDENTIFIER = io.weise.wechsel;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -645,7 +645,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		FDF418F9219DD5D500A8E8E1 /* Build configuration list for PBXProject "wechsel" */ = {
+		FDF418F9219DD5D500A8E8E1 /* Build configuration list for PBXProject "HaloBT" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FDF41915219DD5D700A8E8E1 /* Debug */,
